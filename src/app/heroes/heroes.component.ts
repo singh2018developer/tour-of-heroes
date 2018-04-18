@@ -23,7 +23,8 @@ onSelect(hero: Hero): void {
 
 
 getHeroes(): void {
-  this.heroes = this.heroService.getHeroes();
+  this.heroService.getHeroes()
+      .subscribe(heroes => this.heroes = heroes);
 }
 
 }
